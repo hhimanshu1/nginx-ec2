@@ -21,11 +21,13 @@ services:
       - nginx-volume: /data/nginx
     restart: always
 
-volumes:
-  nginx-volume
-
 networks:
   hserver:
   external: true
+
+volumes:
+  nginx-volume
+
+
 
 
