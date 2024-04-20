@@ -5,7 +5,7 @@ services:
     container_name: gateway
     image: nginx:latest
     networks:
-      hserver
+      - hserver
     ports:
       - "80:80"
     volumes:
@@ -16,7 +16,7 @@ services:
     image: alpine:latest
     container_name: manager
     networks:
-      hserver
+      - hserver
     volumes:
       - nginx-volume: /data/nginx
     restart: always
